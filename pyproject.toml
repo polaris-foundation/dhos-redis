@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "dhos-redis"
+version = "1.0.0"
+description = "Redis functionality for DHOS"
+authors = ["Jon Daly <jonathan.daly@sensynehealth.com>"]
+keywords = ["DHOS", "Redis", "Cache"]
+repository = "https://github.com/draysontechnologies/dhos-redis"
+
+# Yes, this is dumb, isn't it? This is because the package name is different from the folder that contains the sources.
+packages = [
+    {include = "dhosredis"}
+]
+
+[[tool.poetry.source]]
+name = "sensynehealth"
+url = "https://pypi.fury.io/sensynehealth/"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+she-logging = "1.*"
+environs = "9.*"
+redis = "3.*"
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+black = "*"
+coloredlogs = "*"
+coverage = "*"
+isort = "*"
+mock = "*"
+mypy = "*"
+pytest = "*"
+pytest-mock = "*"
+safety = "*"
+tox = "*"
+
+[tool.mypy]
+namespace_packages=true
+ignore_missing_imports=false
+disallow_untyped_defs=true
+
+[[tool.mypy.overrides]]
+module = [
+    "environs",
+    "redis",
+    "pytest",
+]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = "black"
+known_third_party = ["_pytest", "environs", "pytest", "pytest_mock", "redis", "she_logging", "toml"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
