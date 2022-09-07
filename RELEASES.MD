@@ -1,3 +1,7 @@
+1.0.2
+=====
+Fix Python requirements to >3.8
+
 1.0.1
 =====
 Move hosting to public pypi
