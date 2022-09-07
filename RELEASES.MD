@@ -1,3 +1,7 @@
+1.0.1
+=====
+Move hosting to public pypi
+
 1.0.0
 =====
 - Bump major versions of dependencies

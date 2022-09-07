@@ -42,4 +42,4 @@ Redis is designed to be used as a cache, rather than a source of truth.
 It will fail silently in the case of `set_value`, and will return the default value you specify (or `None`) in the case of `get_value`.
 
 ## Deploying
-You can deploy via a merge to `master`. This will require a version bump in `setup.py`, and appropriate release notes in `RELEASES.md`.
+You can deploy via a merge to `main`. This will require a version bump in `setup.py`, and appropriate release notes in `RELEASES.md`.

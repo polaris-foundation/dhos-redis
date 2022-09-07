@@ -1,19 +1,15 @@
 [tool.poetry]
 name = "dhos-redis"
-version = "1.0.0"
-description = "Redis functionality for DHOS"
+version = "1.0.1"
+description = "Redis functionality for Polaris"
 authors = ["Jon Daly <jonathan.daly@sensynehealth.com>"]
-keywords = ["DHOS", "Redis", "Cache"]
+keywords = ["Polaris", "Redis", "Cache"]
 repository = "https://github.com/draysontechnologies/dhos-redis"
 
 # Yes, this is dumb, isn't it? This is because the package name is different from the folder that contains the sources.
 packages = [
     {include = "dhosredis"}
 ]
-
-[[tool.poetry.source]]
-name = "sensynehealth"
-url = "https://pypi.fury.io/sensynehealth/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
